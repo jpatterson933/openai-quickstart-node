@@ -27,7 +27,7 @@ export default function Home() {
 
       setResult(data.result);
       setImagePromptInput("");
-    } catch(error) {
+    } catch (error) {
       // Consider implementing your own error handling logic here
       console.error(error);
       alert(error.message);
@@ -42,7 +42,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <img src="/dog.png" className={styles.icon} />
+        <img src="/rave_mantis.png" className={styles.icon} />
         <h3>Generate Image</h3>
         <form onSubmit={onSubmit}>
           <input
@@ -54,7 +54,10 @@ export default function Home() {
           />
           <input type="submit" value="Generate image" />
         </form>
-        <img src={result}></img>
+        <a download="generated_image">
+
+          <img src={result}></img>
+        </a>
       </main>
     </div>
   );
